@@ -1,0 +1,755 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/teppeis/grunt-parallelize">grunt-parallelize (v1.1.7)</a>
+</h1>
+<h4>Parallelize your task.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-parallelize">module grunt-parallelize</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-parallelize.grunt-parallelize">
+            function <span class="apidocSignatureSpan"></span>grunt-parallelize
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-parallelize.parallelizer">
+            function <span class="apidocSignatureSpan">grunt-parallelize.</span>parallelizer
+            <span class="apidocSignatureSpan">(grunt, task)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-parallelize.targetexecutor">
+            function <span class="apidocSignatureSpan">grunt-parallelize.</span>targetexecutor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">grunt-parallelize.</span>parallelizer.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">grunt-parallelize.</span>targetexecutor.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-parallelize.parallelizer">module grunt-parallelize.parallelizer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-parallelize.parallelizer.parallelizer">
+            function <span class="apidocSignatureSpan">grunt-parallelize.</span>parallelizer
+            <span class="apidocSignatureSpan">(grunt, task)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-parallelize.parallelizer.prototype">module grunt-parallelize.parallelizer.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-parallelize.parallelizer.prototype.exec">
+            function <span class="apidocSignatureSpan">grunt-parallelize.parallelizer.prototype.</span>exec
+            <span class="apidocSignatureSpan">(task, target)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-parallelize.parallelizer.prototype.filterOutput_">
+            function <span class="apidocSignatureSpan">grunt-parallelize.parallelizer.prototype.</span>filterOutput_
+            <span class="apidocSignatureSpan">(output, task, target)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-parallelize.parallelizer.prototype.getNormalizedFiles_">
+            function <span class="apidocSignatureSpan">grunt-parallelize.parallelizer.prototype.</span>getNormalizedFiles_
+            <span class="apidocSignatureSpan">(task, target)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-parallelize.parallelizer.prototype.getProcesses_">
+            function <span class="apidocSignatureSpan">grunt-parallelize.parallelizer.prototype.</span>getProcesses_
+            <span class="apidocSignatureSpan">(task, target)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-parallelize.parallelizer.prototype.getSplittedFiles_">
+            function <span class="apidocSignatureSpan">grunt-parallelize.parallelizer.prototype.</span>getSplittedFiles_
+            <span class="apidocSignatureSpan">(task, target)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-parallelize.parallelizer.prototype.hasDest_">
+            function <span class="apidocSignatureSpan">grunt-parallelize.parallelizer.prototype.</span>hasDest_
+            <span class="apidocSignatureSpan">(files)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-parallelize.parallelizer.prototype.kill">
+            function <span class="apidocSignatureSpan">grunt-parallelize.parallelizer.prototype.</span>kill
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-parallelize.parallelizer.prototype.splitArray_">
+            function <span class="apidocSignatureSpan">grunt-parallelize.parallelizer.prototype.</span>splitArray_
+            <span class="apidocSignatureSpan">(arr, processes)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-parallelize.targetexecutor">module grunt-parallelize.targetexecutor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-parallelize.targetexecutor.targetexecutor">
+            function <span class="apidocSignatureSpan">grunt-parallelize.</span>targetexecutor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-parallelize.targetexecutor.prototype">module grunt-parallelize.targetexecutor.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-parallelize.targetexecutor.prototype.exec">
+            function <span class="apidocSignatureSpan">grunt-parallelize.targetexecutor.prototype.</span>exec
+            <span class="apidocSignatureSpan">(grunt, data, task, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-parallelize.targetexecutor.prototype.kill">
+            function <span class="apidocSignatureSpan">grunt-parallelize.targetexecutor.prototype.</span>kill
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-parallelize" id="apidoc.module.grunt-parallelize">module grunt-parallelize</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-parallelize.grunt-parallelize" id="apidoc.element.grunt-parallelize.grunt-parallelize">
+        function <span class="apidocSignatureSpan"></span>grunt-parallelize
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">grunt-parallelize = function (grunt) {
+  grunt.registerMultiTask('parallelize', 'Parallelize your task.', function() {
+    var args = this.nameArgs.split(':');
+    var task = args[1];
+    var target = args[2];
+    if (args.length === 1) {
+      throw new Error('grunt append the task name automatically');
+    } else if (args.length === 2) {
+      // grunt parallelize:task
+      var executor = new TargetExecutor();
+      toBeKilled.push(executor);
+      executor.exec(grunt, this.data, task, this.async());
+    } else {
+      var childFilesSrcOption = grunt.option('grunt-parallelize-child-filesSrc');
+      if (childFilesSrcOption) {
+        // this is spawned child process
+        taskRunner(grunt, childFilesSrcOption, task, target);
+      } else {
+        var parallelizer = new Parallelizer(grunt, this);
+        toBeKilled.push(parallelizer);
+        parallelizer.exec(task, target);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-parallelize.parallelizer" id="apidoc.element.grunt-parallelize.parallelizer">
+        function <span class="apidocSignatureSpan">grunt-parallelize.</span>parallelizer
+        <span class="apidocSignatureSpan">(grunt, task)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Parallelizer(grunt, task) {
+  this.grunt_ = grunt;
+  this.task_ = task;
+  this.cpCache_ = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-parallelize.targetexecutor" id="apidoc.element.grunt-parallelize.targetexecutor">
+        function <span class="apidocSignatureSpan">grunt-parallelize.</span>targetexecutor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function TargetExecutor() {
+  this.cpCache_ = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-parallelize.parallelizer" id="apidoc.module.grunt-parallelize.parallelizer">module grunt-parallelize.parallelizer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-parallelize.parallelizer.parallelizer" id="apidoc.element.grunt-parallelize.parallelizer.parallelizer">
+        function <span class="apidocSignatureSpan">grunt-parallelize.</span>parallelizer
+        <span class="apidocSignatureSpan">(grunt, task)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Parallelizer(grunt, task) {
+  this.grunt_ = grunt;
+  this.task_ = task;
+  this.cpCache_ = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-parallelize.parallelizer.prototype" id="apidoc.module.grunt-parallelize.parallelizer.prototype">module grunt-parallelize.parallelizer.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-parallelize.parallelizer.prototype.exec" id="apidoc.element.grunt-parallelize.parallelizer.prototype.exec">
+        function <span class="apidocSignatureSpan">grunt-parallelize.parallelizer.prototype.</span>exec
+        <span class="apidocSignatureSpan">(task, target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exec = function (task, target) {
+  var cb = this.task_.async();
+  var splittedFilesSrc = this.getSplittedFiles_(task, target);
+
+  var spawnOptions;
+  // Optionally log the task output
+  // if (options.logConcurrentOutput) {
+  //   spawnOptions = { stdio: 'inherit' };
+  // }
+
+  var self = this;
+  lpad('    ');
+  var ok = true;
+  async.forEach(splittedFilesSrc, function(filesSrc, next) {
+    // need to put filesSrc in a temp file because of command line arg data limit
+    var prefix = ['grunt-parallelize', task, target, ''].join('-');
+    tmp.file({prefix: prefix}, function(err, tmpFile) {
+      if (err) { throw err; }
+      fs.writeFile(tmpFile, JSON.stringify(filesSrc), function (err) {
+        if (err) { throw err; }
+        var filesOption = '--grunt-parallelize-child-filesSrc=' + tmpFile;
+        var cp = self.grunt_.util.spawn({
+          grunt: true,
+          args: [['parallelize', task, target].join(':')].concat(self.grunt_.option.flags(), filesOption),
+          opts: spawnOptions
+        }, function(err, result, code) {
+          if ((err || code &gt; 0)) {
+            ok = false;
+            if (result.stderr) {
+              self.grunt_.warn(result.stderr);
+            }
+          }
+          self.grunt_.log.write('\n' + self.filterOutput_(result.stdout, task, target) + '\n');
+          next();
+        });
+        self.cpCache_.push(cp);
+      });
+    });
+  }, function() {
+    lpad();
+    if (!ok) {
+      self.grunt_.log.writeln('');
+    }
+    cb(ok);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-parallelize.parallelizer.prototype.filterOutput_" id="apidoc.element.grunt-parallelize.parallelizer.prototype.filterOutput_">
+        function <span class="apidocSignatureSpan">grunt-parallelize.parallelizer.prototype.</span>filterOutput_
+        <span class="apidocSignatureSpan">(output, task, target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">filterOutput_ = function (output, task, target) {
+  var regex = new RegExp(util.format('^.*Running "parallelize:%s:%s".*\n\n', task, target), 'g');
+  return output.replace(regex, '');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      }, function(err, result, code) {
+        if ((err || code &gt; 0)) {
+          ok = false;
+          if (result.stderr) {
+            self.grunt_.warn(result.stderr);
+          }
+        }
+        self.grunt_.log.write('\n' + self.<span class="apidocCodeKeywordSpan">filterOutput_</span>(result.stdout, task
+, target) + '\n');
+        next();
+      });
+      self.cpCache_.push(cp);
+    });
+  });
+}, function() {
+  lpad();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-parallelize.parallelizer.prototype.getNormalizedFiles_" id="apidoc.element.grunt-parallelize.parallelizer.prototype.getNormalizedFiles_">
+        function <span class="apidocSignatureSpan">grunt-parallelize.parallelizer.prototype.</span>getNormalizedFiles_
+        <span class="apidocSignatureSpan">(task, target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getNormalizedFiles_ = function (task, target) {
+  var configPath = [task, target];
+  var config = this.grunt_.config(configPath);
+  return this.grunt_.task.normalizeMultiTaskFiles(config);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+}
+
+throw new Error('"processes" option not found');
+};
+
+Parallelizer.prototype.getSplittedFiles_ = function(task, target) {
+var files = this.<span class="apidocCodeKeywordSpan">getNormalizedFiles_</span>(task, target);
+var processes = this.getProcesses_(task, target);
+
+// if any file objects have a destination, can assume that not all src files
+// can be merged into single list
+if (this.hasDest_(files)) {
+  return this.splitArray_(files, processes);
+} else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-parallelize.parallelizer.prototype.getProcesses_" id="apidoc.element.grunt-parallelize.parallelizer.prototype.getProcesses_">
+        function <span class="apidocSignatureSpan">grunt-parallelize.parallelizer.prototype.</span>getProcesses_
+        <span class="apidocSignatureSpan">(task, target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getProcesses_ = function (task, target) {
+  var processes = this.grunt_.config(['parallelize', task, target]);
+  if (typeof processes === 'number') {
+    return processes;
+  } else if (processes) {
+    processes = this.grunt_.config(['parallelize', task, 'options', 'processes']);
+    if (typeof processes === 'number') {
+      return processes;
+    }
+    processes = this.grunt_.config(['parallelize', 'options', 'processes']);
+    if (typeof processes === 'number') {
+      return processes;
+    }
+  }
+
+  throw new Error('"processes" option not found');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+throw new Error('"processes" option not found');
+};
+
+Parallelizer.prototype.getSplittedFiles_ = function(task, target) {
+var files = this.getNormalizedFiles_(task, target);
+var processes = this.<span class="apidocCodeKeywordSpan">getProcesses_</span>(task, target);
+
+// if any file objects have a destination, can assume that not all src files
+// can be merged into single list
+if (this.hasDest_(files)) {
+  return this.splitArray_(files, processes);
+} else {
+  var filesSrc = _(files).chain().map('src').flatten().uniq().value();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-parallelize.parallelizer.prototype.getSplittedFiles_" id="apidoc.element.grunt-parallelize.parallelizer.prototype.getSplittedFiles_">
+        function <span class="apidocSignatureSpan">grunt-parallelize.parallelizer.prototype.</span>getSplittedFiles_
+        <span class="apidocSignatureSpan">(task, target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSplittedFiles_ = function (task, target) {
+  var files = this.getNormalizedFiles_(task, target);
+  var processes = this.getProcesses_(task, target);
+
+  // if any file objects have a destination, can assume that not all src files
+  // can be merged into single list
+  if (this.hasDest_(files)) {
+    return this.splitArray_(files, processes);
+  } else {
+    var filesSrc = _(files).chain().map('src').flatten().uniq().value();
+    return this.splitArray_(filesSrc, processes).map(function(src) {
+      return {
+        src: src
+      };
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.cpCache_.forEach(function(el) {
+  el.kill();
+});
+};
+
+Parallelizer.prototype.exec = function(task, target) {
+var cb = this.task_.async();
+var splittedFilesSrc = this.<span class="apidocCodeKeywordSpan">getSplittedFiles_</span>(task, target);
+
+var spawnOptions;
+// Optionally log the task output
+// if (options.logConcurrentOutput) {
+//   spawnOptions = { stdio: 'inherit' };
+// }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-parallelize.parallelizer.prototype.hasDest_" id="apidoc.element.grunt-parallelize.parallelizer.prototype.hasDest_">
+        function <span class="apidocSignatureSpan">grunt-parallelize.parallelizer.prototype.</span>hasDest_
+        <span class="apidocSignatureSpan">(files)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasDest_ = function (files) {
+  return files.some(function(fileObj) {
+    return fileObj.dest !== undefined;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Parallelizer.prototype.getSplittedFiles_ = function(task, target) {
+var files = this.getNormalizedFiles_(task, target);
+var processes = this.getProcesses_(task, target);
+
+// if any file objects have a destination, can assume that not all src files
+// can be merged into single list
+if (this.<span class="apidocCodeKeywordSpan">hasDest_</span>(files)) {
+  return this.splitArray_(files, processes);
+} else {
+  var filesSrc = _(files).chain().map('src').flatten().uniq().value();
+  return this.splitArray_(filesSrc, processes).map(function(src) {
+    return {
+      src: src
+    };
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-parallelize.parallelizer.prototype.kill" id="apidoc.element.grunt-parallelize.parallelizer.prototype.kill">
+        function <span class="apidocSignatureSpan">grunt-parallelize.parallelizer.prototype.</span>kill
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">kill = function () {
+  this.cpCache_.forEach(function(el) {
+    el.kill();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.grunt_ = grunt;
+this.task_ = task;
+this.cpCache_ = [];
+}
+
+Parallelizer.prototype.kill = function() {
+this.cpCache_.forEach(function(el) {
+  el.<span class="apidocCodeKeywordSpan">kill</span>();
+});
+};
+
+Parallelizer.prototype.exec = function(task, target) {
+var cb = this.task_.async();
+var splittedFilesSrc = this.getSplittedFiles_(task, target);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-parallelize.parallelizer.prototype.splitArray_" id="apidoc.element.grunt-parallelize.parallelizer.prototype.splitArray_">
+        function <span class="apidocSignatureSpan">grunt-parallelize.parallelizer.prototype.</span>splitArray_
+        <span class="apidocSignatureSpan">(arr, processes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">splitArray_ = function (arr, processes) {
+  if (processes &lt; 0) {
+    throw new Error('"processes" option shoud be positive');
+  } else if (!processes) {
+    return [];
+  }
+
+  var remain = arr.length % processes;
+  var per = (arr.length - remain) / processes;
+  var splitted = [];
+  while (arr.length) {
+    splitted.push(arr.splice(0, remain-- &gt; 0 ? per + 1 : per));
+  }
+  return splitted;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Parallelizer.prototype.getSplittedFiles_ = function(task, target) {
+var files = this.getNormalizedFiles_(task, target);
+var processes = this.getProcesses_(task, target);
+
+// if any file objects have a destination, can assume that not all src files
+// can be merged into single list
+if (this.hasDest_(files)) {
+  return this.<span class="apidocCodeKeywordSpan">splitArray_</span>(files, processes);
+} else {
+  var filesSrc = _(files).chain().map('src').flatten().uniq().value();
+  return this.splitArray_(filesSrc, processes).map(function(src) {
+    return {
+      src: src
+    };
+  });
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-parallelize.targetexecutor" id="apidoc.module.grunt-parallelize.targetexecutor">module grunt-parallelize.targetexecutor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-parallelize.targetexecutor.targetexecutor" id="apidoc.element.grunt-parallelize.targetexecutor.targetexecutor">
+        function <span class="apidocSignatureSpan">grunt-parallelize.</span>targetexecutor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function TargetExecutor() {
+  this.cpCache_ = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-parallelize.targetexecutor.prototype" id="apidoc.module.grunt-parallelize.targetexecutor.prototype">module grunt-parallelize.targetexecutor.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-parallelize.targetexecutor.prototype.exec" id="apidoc.element.grunt-parallelize.targetexecutor.prototype.exec">
+        function <span class="apidocSignatureSpan">grunt-parallelize.targetexecutor.prototype.</span>exec
+        <span class="apidocSignatureSpan">(grunt, data, task, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exec = function (grunt, data, task, callback) {
+  var targets = _.keys(data).filter(function(item) {return item !== 'options';});
+  var spawnOptions;
+  lpad('    ');
+  var ok = true;
+  async.forEachSeries(targets, function(target, next) {
+    var nameArgs = ['parallelize', task, target].join(':');
+    var cp = grunt.util.spawn({
+      grunt: true,
+      args: [nameArgs].concat(grunt.option.flags()),
+      opts: spawnOptions
+    }, function(err, result, code) {
+      if (err || code &gt; 0) {
+        ok = false;
+        if (result.stderr) {
+          grunt.warn(result.stderr);
+        }
+      }
+      grunt.log.writeln('\n' + result.stdout);
+      next();
+    });
+    this.cpCache_.push(cp);
+  }.bind(this), function() {
+    lpad();
+    if (!ok) {
+      grunt.log.writeln('');
+    }
+    callback(ok);
+  }.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-parallelize.targetexecutor.prototype.kill" id="apidoc.element.grunt-parallelize.targetexecutor.prototype.kill">
+        function <span class="apidocSignatureSpan">grunt-parallelize.targetexecutor.prototype.</span>kill
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">kill = function () {
+  this.cpCache_.forEach(function(el) {
+    el.kill();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.grunt_ = grunt;
+this.task_ = task;
+this.cpCache_ = [];
+}
+
+Parallelizer.prototype.kill = function() {
+this.cpCache_.forEach(function(el) {
+  el.<span class="apidocCodeKeywordSpan">kill</span>();
+});
+};
+
+Parallelizer.prototype.exec = function(task, target) {
+var cb = this.task_.async();
+var splittedFilesSrc = this.getSplittedFiles_(task, target);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
